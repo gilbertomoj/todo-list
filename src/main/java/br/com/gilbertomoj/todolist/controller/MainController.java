@@ -14,6 +14,6 @@ public class MainController {
     @GetMapping
     public RedirectView message(){
 
-        return new RedirectView("http://localhost:8080/swagger-ui/index.html");
+        return new RedirectView("/swagger-ui/index.html");
     }
 }
