@@ -1,0 +1,94 @@
+{
+	"info": {
+		"_postman_id": "d43f9ce2-9af9-477b-ad44-1e438896a59c",
+		"name": "todolist",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "11799179"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"gilbertomoj\",\r\n    \"name\": \"gilberto\",\r\n    \"password\": \"1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/users/"
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "gilbertomoj",
+						"password": "1234"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"description\": \"teste\",\r\n    \"title\": \" de aula\",\r\n    \"priority\": \"ALTA\",\r\n    \"startAt\": \"2024-10-11T12:00:00\",\r\n    \"endAt\": \"2025-12-11T12:00:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://todolist-xxns.onrender.com/tasks/"
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "1234",
+						"username": "gilbertomoaj"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "https://todolist-xxns.onrender.com/tasks/"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/tasks/",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "gilbertomoj",
+						"password": "1234"
+					}
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"1231323213232132321321Gravação1231323213232132321321Gravação1231323213232132321321Gravação\",\r\n    \"description\": \"teste update\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/tasks/daa86326-ba2e-4c95-88b7-44aff88e7b28"
+			},
+			"response": []
+		}
+	]
+}

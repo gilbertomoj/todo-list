@@ -41,6 +41,14 @@ public class TaskController {
         return ResponseEntity.status(HttpStatus.OK).body(tasks);
     }
 
+    @GetMapping("/{taskId}")
+    public ResponseEntity findById(@PathVariable UUID taskId, HttpServletRequest request){
+        var userId = request.getAttribute("idUser");
+        var tasks = taskRepository.findByUserId((UUID) userId);
+
+        return ResponseEntity.status(200).body("");
+    }
+
     @PutMapping("/{taskId}")
     public ResponseEntity updateTask(@RequestBody TaskModel taskModel, @PathVariable UUID taskId, HttpServletRequest request) {
         var task = this.taskRepository.findById(taskId).orElse(null);
@@ -60,5 +68,11 @@ public class TaskController {
         var updatedTask = this.taskRepository.save(task);
 
         return ResponseEntity.status(HttpStatus.OK).body(updatedTask);
+    }
+
+    @DeleteMapping("/{taskId}")
+    public ResponseEntity deleteTask(@PathVariable UUID taskId){
+
+        return ResponseEntity.status(HttpStatus.OK).build();
     }
 }
